@@ -2,8 +2,6 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-Frame-Options"	content="DENY" />
-	<meta http-equiv="Content-Security-Policy"	content="frame-ancestors 'none'" />
 	
 	<meta name="twitter:card"			content="summary" />
 	<meta name="twitter:creator"		content="@jetforme" />
@@ -18,7 +16,7 @@
 	
 	<title>COVID-19 Data</title>
 	
-	<link  rel="stylesheet"href="c3.css" type="text/css">	
+	<link rel="stylesheet"href="c3.css" type="text/css">	
 	<link rel="stylesheet" href="main.css" type="text/css">
 	
 	<script src="https://d3js.org/d3.v5.min.js"></script>
@@ -42,7 +40,7 @@
 <body class="with-3d-shadow with-transitions">
 
 <div class="header">
-	<h1>COVID-19</h1>
+	<h1>COVID-19 <span id="activity" style="font-size: 0.8em; color: #888">Loading…</span></h1>
 </div>
 
 <div class="controls">
@@ -66,33 +64,38 @@
 	<div id="minDate" style="display: inline-block"></div>
 </div>
 
+<div id="tags1"></div>
+
 <div class="charts">
-	<h2>Confirmed Cases</h2>
+	
+	<h2>Daily Cases per Capita</h2>
 
-	<div id="cases" style="width: 100%; height: 400px; margin-top: 2em;"></div>
-
-	<h2>Confirmed Cases per Capita</h2>
-
-	<div id="casesPerCapita" style="width: 100%; height: 400px; margin-top: 2em;"></div>
+	<div id="dailyCasesPerCapita" style="width: 100%; height: 400px;"></div>
 
 	<h2>Daily Cases</h2>
 
 	<div id="dailyCases" style="width: 100%; height: 400px;"></div>
 
-	<h2>Deaths</h2>
-
-	<div id="deaths" style="width: 100%; height: 400px;"></div>
-
 	<h2>Daily Deaths</h2>
 
 	<div id="dailyDeaths" style="width: 100%; height: 400px;"></div>
 
+	<h2>Cases per Capita</h2>
+
+	<div id="casesPerCapita" style="width: 100%; height: 400px; margin-top: 2em;"></div>
+
 	<h2>Deaths as a Percentage of Cases</h2>
 
 	<div id="deathPercentages" style="width: 100%; height: 400px;"></div>
-</div>
 
-<div id="tags1"></div>
+	<h2>Cases</h2>
+
+	<div id="cases" style="width: 100%; height: 400px; margin-top: 2em;"></div>
+
+	<h2>Deaths</h2>
+
+	<div id="deaths" style="width: 100%; height: 400px;"></div>
+</div>
 
 <div class="footer">
 	<h3>Notes</h3>
